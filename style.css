@@ -17,6 +17,7 @@
     --shadow-icons:rgba(122, 255, 200, 0.822);
     --switch-bg-url: url(./assets/moon-icon.svg);
     --color-button:rgba(122, 255, 200, 1);
+    --switch-color: rgba(122, 255, 200, 0.5);
 }
 
 .light{
@@ -30,6 +31,7 @@
     --shadow-icons: rgba(65, 20, 70, 0.1);
     --switch-bg-url: url(./assets/sun-icon.svg);
     --color-button: rgb(189, 101, 211);
+    --switch-color:rgba(178, 137, 189, 0.432);
 }
 
 
@@ -100,6 +102,7 @@ body{
     left: 0;
     z-index: 1;
     transform: translateY(-50%);
+    animation: deslize2 0.5s;
 }
 
 
@@ -115,11 +118,15 @@ body{
 }
 
 .light .butao button{
-    right: 0;
-    left: initial;
+    animation: deslize 0.5s forwards;
 
 }
 
+.butao button:hover{
+    outline: 8px solid var(--switch-color);
+
+
+}
 
 a{
     color: var(--text-color);
@@ -207,5 +214,26 @@ footer{
     }
 
 
+
+}
+
+@keyframes deslize {
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+
+}
+
+@keyframes deslize2{
+    from{
+        left: 50%;
+
+    }
+    to{
+        left: 0;
+    }
 
 }
