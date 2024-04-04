@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Scribble&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-color: rgba(55, 253, 171, 0.822);
+    --bg-url: url(./assets/bg-desktop.jpg);
+    --text-shadow: rgb(207, 36, 207);
+    --text-shadow2: rgba(84, 124, 107, 0.822);
+    --stroke-color:rgba(227, 66, 241, 0.1);
+    --surface-color:rgba(227, 162, 243, 0.274);
+    --image-shadow: rgba(122, 255, 200, 0.822);
+    --shadow-icons:rgba(122, 255, 200, 0.822);
+    --switch-bg-url: url(./assets/moon-icon.svg);
+    --color-button:rgba(122, 255, 200, 1);
+}
+
+.light{
+    --text-color: rgba(72, 24, 73, 0.822);
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+    --text-shadow: rgb(32, 11, 32);
+    --text-shadow2: rgb(189, 101, 211);
+    --stroke-color:rgba(114, 45, 105, 0.1);
+    --surface-color:rgba(178, 137, 189, 0.432);
+    --image-shadow: rgba(158, 20, 177, 0.822);
+    --shadow-icons: rgba(65, 20, 70, 0.1);
+    --switch-bg-url: url(./assets/sun-icon.svg);
+    --color-button: rgb(189, 101, 211);
+}
+
+
+body{
+    color: var(--text-color);
+    background: var(--bg-url);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    font-family: 'Kanit', sans-serif;
+}
+
+.container{
+    width: 360PX;
+    margin: 56px auto 0px auto;
+    padding: 0 24px;
+    
+}
+
+.profile{
+    padding: 24px;
+    
+}
+
+.profile img{
+    
+    display: block;
+    width: 112px;
+    margin: auto;
+    filter: drop-shadow(1px 1px 20px var(--image-shadow));
+}
+
+.nome{
+    color: var(--text-color);
+    text-shadow: 
+        1px 1px var(--text-shadow2),
+        2px 2px var(--text-shadow2),
+        3px 3px var(--text-shadow2),
+        4px 4px var(--text-shadow2),
+        0.5px 0.5px 30px var(--text-shadow);
+    text-align: center;
+    font-size: 25px;
+    font-style: oblique;
+    margin-top: 8px;
+}
+
+.butao{
+    width: 64px;
+    position: relative;
+
+    margin: 4px auto;
+
+
+}
+
+.butao button{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 0;
+    background: var(--color-button) var(--switch-bg-url) no-repeat center;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition: 1s;
+    z-index: 1;
+    transform: translateY(-50%);
+
+}
+
+
+.butao span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--text-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+.light .butao button{
+    right: 0;
+    left: initial;
+
+}
+
+
+a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+
+ul{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 24px 0;
+}
+
+
+
+ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 20px;
+
+    background: var(--stroke-color);
+    border: 2px solid var(--text-color);
+    border-radius: 8px;
+    
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    font-weight: 400;
+
+    transition: background .5s;
+}
+
+ul li a:hover{
+    border: 2px solid var(--text-color);
+    background:var(--surface-color);
+}
+
+.icons{
+    display: flex;
+    gap: 16px;
+    padding: 24px 0;
+    
+    font-size: 30px;
+
+    justify-content: center;
+}
+
+.icons a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    
+    transition: background .5s;
+    border-radius: 50%;
+}
+
+.icons a:hover{
+    box-shadow: 0px 0px 6px var(--shadow-icons) inset,
+        0px 0px 6px var(--shadow-icons);
+    
+}
+
+footer{
+    padding: 24px;
+    text-align: center;
+    font-size: 20px;
+}
