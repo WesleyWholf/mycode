@@ -9,8 +9,7 @@
 :root{
     --text-color: rgba(53, 255, 171, 0.822);
     --bg-url: url(./assets/bg-mobile.jpg);
-    --text-shadow: rgb(207, 36, 207);
-    --text-shadow2: rgba(84, 124, 107, 0.822);
+    --text-shadow: rgba(122, 255, 200, 0.822);
     --stroke-color:rgba(227, 66, 241, 0.1);
     --surface-color:rgba(227, 162, 243, 0.274);
     --image-shadow: rgba(122, 255, 200, 0.822);
@@ -24,7 +23,6 @@
     --text-color: rgba(72, 24, 73, 0.822);
     --bg-url: url(./assets/bg-mobile-light.jpg);
     --text-shadow: rgb(32, 11, 32);
-    --text-shadow2: rgb(189, 101, 211);
     --stroke-color:rgba(114, 45, 105, 0.1);
     --surface-color:rgba(178, 137, 189, 0.432);
     --image-shadow: rgba(158, 20, 177, 0.822);
@@ -70,11 +68,7 @@ body{
 .nome{
     color: var(--text-color);
     text-shadow: 
-        1px 1px var(--text-shadow2),
-        2px 2px var(--text-shadow2),
-        3px 3px var(--text-shadow2),
-        4px 4px var(--text-shadow2),
-        0.5px 0.5px 30px var(--text-shadow);
+        1px 1px 30px var(--text-shadow);
     text-align: center;
     font-size: 25px;
     font-style: oblique;
