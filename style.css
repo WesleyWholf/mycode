@@ -7,7 +7,7 @@
 }
 
 :root{
-    --text-color: rgba(55, 253, 171, 0.822);
+    --text-color: rgba(53, 255, 171, 0.822);
     --bg-url: url(./assets/bg-desktop.jpg);
     --text-shadow: rgb(207, 36, 207);
     --text-shadow2: rgba(84, 124, 107, 0.822);
